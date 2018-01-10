@@ -1,0 +1,26 @@
+{
+  "name": "strong-webpack",
+  "version": "1.0.0",
+  "description": "学习webpack的源码，并模仿实现打包，只作为个人学习笔记",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strongcode9527/strong-webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "learn"
+  ],
+  "author": "strong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strongcode9527/strong-webpack/issues"
+  },
+  "homepage": "https://github.com/strongcode9527/strong-webpack#readme",
+  "dependencies": {
+    "esprima": "^4.0.0"
+  }
+}
