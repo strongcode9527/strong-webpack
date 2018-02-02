@@ -1,11 +1,15 @@
-var fs = require('fs'),
-    esprima = require('esprima'),
-    inspect = require('util').inspect,
-    R = require('ramda'),
-    path = require('path')
 
-function parse(absolute, tree) {
-  var content = fs.readFileSync(absolute, 'utf8'),
+import fs from 'fs'
+import R from 'ramda'
+import path from 'path'
+import {inspect} from 'util'
+import {nodeFuncPromise} from '../utils'
+
+//不支持es6引入
+var esprima = require('esprima')
+
+async function parse(absolute, tree) {
+  var content = await nodeFuncPromise(fs.readFile)(absolute, 'utf8'),
       parseArray = esprima.parse(content).body
 
   // console.log(inspect(parseArray, { showHidden: true, depth: null }))
