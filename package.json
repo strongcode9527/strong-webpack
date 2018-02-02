@@ -4,7 +4,7 @@
   "description": "学习webpack的源码，并模仿实现打包，只作为个人学习笔记",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js",
+    "start": "nodemon src/bootstrap.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,10 +22,15 @@
   },
   "homepage": "https://github.com/strongcode9527/strong-webpack#readme",
   "dependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "eslint-plugin-es6-recommended": "^0.1.2",
     "esprima": "^4.0.0",
-    "nodemon": "^1.14.10"
+    "nodemon": "^1.14.10",
+    "ramda": "^0.25.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
     "babel-register": "^6.26.0",
     "eslint": "^4.15.0"
   }

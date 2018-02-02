@@ -1,4 +1,3 @@
-module.exports = function a () {
-  console.log('a 模块代码')
-  return 3
-}
+var b = require('./b') 
+
+module.exports = 'this is a and import from' + b 

@@ -1,3 +1,4 @@
-var a = require('./a')
+var a = require('./a') 
+var b = require('./b')
 
 console.log(a())
