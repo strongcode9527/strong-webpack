@@ -1,5 +1,5 @@
-import c from './othercomponents/c.js'
 
+var c = require('./othercomponents/c.js')
 console.log('this is b file')
 
-export default 'this is b file and import from c file'
+module.exports = 'this. is  b module import c module'

@@ -1,4 +1,4 @@
 
-console.log('this is c file')
+console.log('this is c module')
 
-export default 'this is c file'
+module.exports = 'this is c module'

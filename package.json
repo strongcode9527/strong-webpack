@@ -25,6 +25,7 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "eslint-plugin-es6-recommended": "^0.1.2",
     "esprima": "^4.0.0",
+    "greenlet": "^0.1.2",
     "nodemon": "^1.14.10",
     "ramda": "^0.25.0"
   },
