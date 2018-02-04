@@ -23,20 +23,22 @@ async function parse(absolute, tree, id) {
         }
   tree.push(module)
   // console.log(inspect(parseArray, { showHidden: true, depth: null }))
-
+  
   for(var i = 0; i < parseArray.length; ++i) { 
     var item = parseArray[i]
-
+    
     if(item.type === 'VariableDeclaration' && R.path(['declarations','0', 'init', 'type'],item) === 'CallExpression' && R.path(['declarations', '0', 'init', 'callee', 'name'], item) === 'require' && R.path(['declarations', '0', 'init', 'arguments', '0', 'value'])) {
       const trunkPath = path.resolve(absolute, '../',R.path(['declarations', '0', 'init', 'arguments', '0', 'value'], item))
       if(modules[trunkPath]) {
         return 
       }
       modules[trunkPath] = true
-      await parse(trunkPath, tree, ++id)
       module.requires.push(trunkPath)
+      await parse(trunkPath, tree, ++id)
     }
   }
+  // 同时异步读取文件
+
   return 
 }
 
