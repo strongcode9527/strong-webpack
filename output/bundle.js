@@ -27,4 +27,15 @@
   __webpack_require__.p = "";
   // Load entry module and return exports
   return __webpack_require__(0);
-})(strong);
+})([function(module, exports, __webpack_require__){var a = __webpack_require__(1)
+var b = __webpack_require__(2)
+
+console.log(a())},function(module, exports, __webpack_require__){var b = __webpack_require__(2) 
+module.exports = 'this is a and import from' + b },function(module, exports, __webpack_require__){
+var c = __webpack_require__(3)
+console.log('this is b file')
+
+module.exports = 'this. is  b module import c module'},function(module, exports){
+console.log('this is c module')
+
+module.exports = 'this is c module'}]);

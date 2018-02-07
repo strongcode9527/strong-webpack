@@ -30,7 +30,11 @@ async function parse(absolute, tree, map, id) {
   
     if(item.type === 'VariableDeclaration' && R.path(['declarations','0', 'init', 'type'],item) === 'CallExpression' && R.path(['declarations', '0', 'init', 'callee', 'name'], item) === 'require' && R.path(['declarations', '0', 'init', 'arguments', '0', 'value'])) {
       const trunkPath = path.resolve(absolute, '../',R.path(['declarations', '0', 'init', 'arguments', '0', 'value'], item))
+
+      module.requires.push(trunkPath)
+
       if(modules[trunkPath]) {
+        console.log('in', trunkPath)
         return 
       }
 
@@ -39,7 +43,7 @@ async function parse(absolute, tree, map, id) {
       //构建绝对路径和id的字典。
       map[trunkPath] = id
 
-      module.requires.push(trunkPath)
+
       await parse(trunkPath, tree, map, ++id)
     }
   }
