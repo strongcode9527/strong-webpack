@@ -1,2 +1,3 @@
 var b = require('./b.js') 
-module.exports = 'this is a and import from' + b 
+
+module.exports = 1 + b 

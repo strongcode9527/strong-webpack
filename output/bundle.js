@@ -30,12 +30,12 @@
 })([function(module, exports, __webpack_require__){var a = __webpack_require__(1)
 var b = __webpack_require__(2)
 
-console.log(a())},function(module, exports, __webpack_require__){var b = __webpack_require__(2) 
-module.exports = 'this is a and import from' + b },function(module, exports, __webpack_require__){
+console.log(a)
+console.log(b)},function(module, exports, __webpack_require__){var b = __webpack_require__(2) 
+
+module.exports = 1 + b },function(module, exports, __webpack_require__){
 var c = __webpack_require__(3)
-console.log('this is b file')
 
-module.exports = 'this. is  b module import c module'},function(module, exports){
-console.log('this is c module')
+module.exports = 1 + c},function(module, exports){
 
-module.exports = 'this is c module'}]);
+module.exports = 1}]);
